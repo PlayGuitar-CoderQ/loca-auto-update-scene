@@ -1,6 +1,6 @@
 {
   "name": "local-auto-update-scene",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "description": "用于内部自动获取场景数据 （不适合其他开发者）",
   "type":  "module",
   "bin": {

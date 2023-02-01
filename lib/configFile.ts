@@ -31,4 +31,6 @@ export const getScene = async (config: ConfigType | null): Promise<Object> => {
 export const writeSceneFile = (sceneData: Object, path: string) => {
   const sceneDataJSON = JSON.stringify(sceneData);
   fs.writeFileSync(path, sceneDataJSON);
+
+  console.log(" ============================  更新成功  ================================");
 }
