@@ -1,9 +1,18 @@
-import fetch from 'node-fetch';
 
-const getScene = async () => {
-  const response = await fetch("https://hub.realibox.com/api/hub/v1/studio/scenes/publish/2371408606185652314");
-  const res = await response.json();
-  return res
+import { isNull } from '../utils/is';
+import { getConfig, getScene, writeSceneFile } from './configFile';
+
+const CONFIG_FILE_NAME = 'laus.config.json';
+
+const updateLocalScene = async () => {
+  const config = await getConfig(CONFIG_FILE_NAME);
+  const isNotUpdate = !config?.sceneStaticPath && config?.sceneUrl;
+  
+  if (isNotUpdate || isNull(config)) return;
+
+  const sceneData = await getScene(config);
+
+  writeSceneFile(sceneData, config?.sceneStaticPath!);
 }
 
-getScene();
+updateLocalScene();
