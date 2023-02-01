@@ -1,0 +1,22 @@
+{
+  "name": "local-auto-update-scene",
+  "version": "1.0.0",
+  "description": "用于内部自动获取场景数据 （不适合其他开发者）",
+  "bin": {
+    "laus": "dist/index.js"
+  },
+  "scripts": {
+    "dev": "tsup --watch",
+    "build": "tsup"
+  },
+  "keywords": [],
+  "author": "Declan Chiu",
+  "license": "ISC",
+  "devDependencies": {
+    "@types/node": "^18.11.18",
+    "tsup": "^6.5.0"
+  },
+  "dependencies": {
+    "typescript": "^4.9.5"
+  }
+}
