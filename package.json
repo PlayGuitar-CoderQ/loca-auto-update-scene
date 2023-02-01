@@ -4,7 +4,7 @@
   "description": "用于内部自动获取场景数据 （不适合其他开发者）",
   "type":  "module",
   "bin": {
-    "laus": "dist/index.cjs"
+    "laus": "dist/index.js"
   },
   "scripts": {
     "dev": "tsup --watch",
